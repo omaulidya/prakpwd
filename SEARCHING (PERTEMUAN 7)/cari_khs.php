@@ -17,7 +17,9 @@ echo "<b>Hasil pencarian : ".$cari."</b>";
 <tr>
 <th>No</th>
 <th>NIM</th>
+<th>Nama</th>
 <th>Kode MK</th>
+<th>Mata Kuliah</th>
 <th>Nilai</th>
 </tr>
 <?php 
@@ -35,7 +37,9 @@ while($r = mysqli_fetch_array($tampil)){
 <tr>
 <td><?php echo $no++; ?></td>
 <td><?php echo $r['NIM']; ?></td>
+<td><?php echo $r['Nama']; ?></td>
 <td><?php echo $r['kodemk']; ?></td>
+<td><?php echo $r['namamk']; ?></td>
 <td><?php echo $r['nilai']; ?></td>
 </tr>
 <?php } ?>
