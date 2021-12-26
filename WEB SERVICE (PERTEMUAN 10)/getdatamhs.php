@@ -1,11 +1,20 @@
 <?php
-require_once "koneksi.php";
-$sql = "select * from mahasiswa";
-$query = mysqli_query($con,$sql);
-while ($row = mysqli_fetch_assoc($query)) {
- $data[] = $row;
+//koneksi ke database employee
+$connection = 
+mysqli_connect("localhost","id18181765_postest10","~*@1EE*xhk1#jET9","id18181765_akademik") or 
+die("Error " . mysqli_error($connection));
+//query ke table employee
+$sql = "select * from khs where nim='MHS04'";
+$result = mysqli_query($connection, $sql) or die("Error in 
+Selecting " . mysqli_error($connection));
+//pembuatan array
+$emparray = array();
+while($row =mysqli_fetch_assoc($result))
+{
+$emparray[] = $row;
 }
-header('content-type: application/json');
-echo json_encode($data);
-mysqli_close($con);
+//pembuatan json
+echo json_encode($emparray);
+//tutup koneksi
+mysqli_close($connection);
 ?>
