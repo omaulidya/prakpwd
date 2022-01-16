@@ -1,0 +1,31 @@
+<?php
+require_once("koneksi.php");
+header("location:menu.php");
+header("location:admin.php");
+header("location:create.php");
+header("location:lap_data.php");
+header("location:xml.php");
+header("location:json.php");
+?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Data Pasien</title>
+    <link rel="stylesheet" type="text/css" href="csss/style3.css">
+  </head>
+  <body>
+ <ul class="bar" class="aktif">
+  <li><a href=menu.php>Home</a><i class="fas fa-home"></i></li>
+  <li><a href=admin.php>Data Pasien</a></li>
+  <li><a href=create.php>Tambah Data</a><i class="fas fa-plus"></i></li>
+  <li><a href=lap_data.php>Cetak</a><i class="fas fa-plus"></i></li>
+  <li><a href=xml.php>XML</a><i class="fas fa-plus"></i></li>
+  <li><a href=json.php>JSON</a><i class="fas fa-plus"></i></li>
+  <li><a href="logout.php" onclick="return confirm('Yakin ingin logout?')"><input type="submit" value="Log Out"></a><i class="fas fa-plus"></i></li>
+</ul>
+
+<h3>SELAMAT DATANG</h3>
+</body>
+</html>
